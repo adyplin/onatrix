@@ -1,0 +1,58 @@
+#reviews {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-gray);
+
+    @include desktop {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+   .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 50px 0;
+
+    .content-box{
+        width: 70%;
+
+        @include desktop {
+            width: 50%;
+        }
+
+        .paragraph {
+            font-style: italic;
+            color: #999999;
+            font-weight: 200;
+        }
+
+        span {
+            color: var(--color-dark);
+        }
+        
+        .title {
+
+            p {
+                font-size: 14px;
+                color: #2D303A;
+                margin-top: 10px;
+            }
+    
+            h6 {
+                color: var(--color-dark);
+                font-style: italic;
+                font-weight: 400;
+            }
+        }
+
+    }
+
+   }
+
+   img {
+    width: 100%;
+    // height: fit-content;
+   }
+}

@@ -1,0 +1,80 @@
+#risk-management{
+    padding: 50px 0;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+
+        @include desktop{
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-areas: "about text text text";
+        }
+
+        .about-us {
+            display: flex;
+            flex-direction: column;
+            grid-area: about;
+            margin: 0 20px;
+    
+            p {
+                font-size: 14px;
+                margin: 15px 0;
+            }
+            
+            h5 {
+                margin: 0px 0 20px 0;
+                color: var(--color-primary);
+                font-weight: 600;
+            }
+            
+        }
+        
+        .content {
+            grid-area: text;
+            border-left: 2px solid var(--color-gray);
+            padding-left: 40px;
+
+            img {
+                display: none;
+            }
+            
+
+            @include desktop {
+                img {
+                    display: block;
+                }
+            }
+    
+    
+            
+    
+            .text-box {
+                margin: 30px 0;
+                
+                p {
+                    font-size: 14px;
+    
+                }
+                .paragraphs {
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    padding-left: 20px;
+                    margin: 5px 0;
+                    
+    
+                    i {
+                        color: var(--color-secondary);
+                        font-size: 50%;
+                        position: absolute;
+                        left: 0px;
+                        top: 10px;
+                    }
+                }
+            }
+        }
+    }
+    
+}

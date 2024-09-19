@@ -1,0 +1,45 @@
+#founder {
+    padding: 100px 0;
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // text-align: center;
+
+
+        @include desktop {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            grid-template-areas: "tina text text";
+            flex-direction: column;
+            gap: 3.5em;
+        }
+
+        .image-box {
+            grid-area: tina;
+
+            p {
+                margin: 1em 0;
+                font-style: italic;
+            }
+        }
+
+        .text-box{
+            grid-area: text;
+            
+
+            .paragraph {
+                font-size: 20px;
+                font-weight: 300;
+                font-style: italic;
+                
+            }
+
+            p {
+                font-size: 14px;
+                margin: 10px 0;
+            }
+        }
+    }
+}

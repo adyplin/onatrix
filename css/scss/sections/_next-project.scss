@@ -1,0 +1,103 @@
+.next-project {
+    display: flex;
+    position: relative;
+    padding: 200px 0 160px 0;
+    background-color: var(--color-gray);
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        align-items: center;
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+        }
+        
+
+        .img-content {
+            display: none;
+
+            @include tablet {
+                display: block;
+                width:auto;
+                height: auto;
+            }
+
+            @include desktop {
+                display: block;
+                position: relative;
+                width: 50%;
+                height: auto;
+            }
+
+            
+            .dots {
+                display: none;
+
+                @include desktop {
+                    display: block;
+                    z-index: 1;
+                    position: absolute;
+                    top:-310px;
+                    right:100px;
+                }
+
+            }
+            .green-bg {
+               display: none;
+
+               @include desktop {
+                display: block;
+                z-index: 2;
+                position: absolute;
+                top:-94px;
+                right: 0;
+               }
+            }
+
+            .person {
+                display: none;
+
+                @include desktop {
+                    display: block;
+                    z-index: 3;
+                    position: absolute;
+                    top:-357px;
+                    right: 120px;
+                }
+
+            }
+        }
+
+        .text-content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+
+            i {
+                margin-right: 10px;
+                color: var(--color-secondary);
+            }
+
+            p {
+                font-size: 14px;
+                font-style: italic;
+                padding-left: 15px;
+            }
+
+            h6 {
+                color: var(--color-primary);
+            }
+
+            @include desktop {
+                width: 40%;
+                text-align: left;
+            }
+        }
+    }
+}

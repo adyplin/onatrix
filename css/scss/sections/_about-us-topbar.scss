@@ -1,0 +1,35 @@
+#about-us-topbar {
+    background-color: var(--color-gray);
+    position: relative;
+    padding: 50px 0;
+    overflow: hidden;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        
+        i {
+            font-weight: 400;
+            margin: 0 10px;
+        }
+    }
+
+    .background {
+ 
+        .left {
+            position: absolute;
+            left: 0;
+            bottom:0;
+            // overflow: hidden;
+        }
+
+        .right {
+            position: absolute;
+            bottom: 30px;
+            right:0;
+            // overflow: hidden;
+        }
+    }
+}

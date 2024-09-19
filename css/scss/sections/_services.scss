@@ -1,0 +1,78 @@
+.services {
+    background-color: var(--color-gray);
+    padding: 4em 0;
+    text-align: center;
+
+    .container {
+        
+
+        .headline {
+
+            display: inline-block;
+            max-width: 80%;
+            margin: 0 auto;
+            text-align: center;
+
+            @include tablet {
+                max-width: 50%;
+            }
+
+            h2 {
+                font-size: 30px;
+            }
+            h5 {
+                color: var(--color-secondary);
+            }
+
+            @include tablet {
+                h2 {
+                    font-size: 40px;
+                }
+            }
+            
+        }
+
+        .content {
+
+            display: grid;
+            grid-template-columns: 1fr;
+            border-radius: 10px;
+            gap: 20px;
+
+            img {
+                width: 100%;
+            }
+
+            @include tablet {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+
+            @include desktop {
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 40px;
+            }
+
+            .content-box {
+                background-color: var(--color-light);
+                border: 1px solid var(--color-gray);
+                text-align: left; 
+                h6 {
+                    color: var(--color-primary);
+                    padding: 1em 0 1em 2em;
+                }
+                p {
+                    padding: 1.5em 1em 2em 2em;
+                }
+
+                &:hover {
+                    transition: all 0.15s ease-in-out;
+                    cursor: pointer;
+                    box-shadow: 0px 10px 12px -1px rgba(19, 16, 34, 0.03), 0px 4.4px 20px -1px rgba(19, 16, 34, 0.05);
+
+                    
+                }
+            }
+        }
+    }
+}

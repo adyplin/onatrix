@@ -1,0 +1,84 @@
+#our-experts {
+    padding: 100px 0;
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+            font-size: 13px;
+            font-weight: 400;
+            color: var(--color-primary-light);
+        }
+
+        h5 {
+            color: var(--color-primary);
+        }
+
+        .title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 45%;
+            align-items: center;
+            
+        }
+
+        .big-content {
+            display: flex;
+            flex-direction: column;
+
+            @include desktop {
+                display: flex;
+                flex-direction: row;
+            }
+            .big-content-box {
+                margin: 0 10px;
+                border: 2px solid var(--color-gray);
+
+                &:hover {
+                    transition: all 0.15s ease-in-out;
+                    cursor: pointer;
+                    box-shadow: 0px 10px 12px -1px rgba(19, 16, 34, 0.03), 0px 4.4px 20px -1px rgba(19, 16, 34, 0.05);
+                    
+                }
+
+                .subtitle {
+                    margin: 15px 0 0 25px;
+                }
+
+            }
+        }
+
+        .small-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+
+            @include desktop {
+                display: flex;
+            }
+            .small-content-box {
+                margin: 40px 10px;
+                border: 1px solid var(--color-gray);
+
+                &:hover {
+                    transition: all 0.15s ease-in-out;
+                    cursor: pointer;
+                    box-shadow: 0px 10px 12px -1px rgba(19, 16, 34, 0.03), 0px 4.4px 20px -1px rgba(19, 16, 34, 0.05);
+                    
+                }
+
+                .subtitle {
+                    margin: 15px 0 0 15px;
+                }
+
+                h6 {
+                    color: var(--color-primary);
+                }
+
+            }
+        }
+    }
+}

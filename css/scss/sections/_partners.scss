@@ -1,0 +1,16 @@
+#partners {
+    padding: 100px 0;
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+        }
+    }
+}

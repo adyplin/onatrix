@@ -1,0 +1,27 @@
+#about-us {
+    padding: 80px 0;
+
+    .container {
+
+        .headline {
+            padding: 30px 0;
+
+            h5 {
+                color: var(--color-secondary)
+            }
+        }
+
+        .signature-container {
+            padding: 20px 0;
+
+            .quote {
+                width: 55%;
+            }
+    
+            .paragraph {
+                width: 70%;
+            }
+        }
+
+    }
+}

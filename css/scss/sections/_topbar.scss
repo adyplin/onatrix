@@ -1,0 +1,73 @@
+#topbar {
+    .contact-box {
+        background-color: var(--color-primary); 
+        width: 100%; 
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+
+
+    }
+    
+    .container {
+        width: 100%;
+        padding: 0 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box; 
+
+        @include desktop {
+            width: 100%;
+        }
+
+
+        .text {
+            display: flex;
+            color: var(--color-light);
+            font-size: 13px;
+        }
+        
+        .social {
+            display: none;
+            
+        }
+        
+        .btn-menu {
+            display: block;
+        }
+        
+        
+        
+        @include tablet {
+            .btn-menu {
+                display: none;
+            }
+        
+            .social {
+                display: flex;
+                height: 100%;
+                align-items: center;
+                
+                
+                .facebook, .twitter, .linkedin {
+                    color: var(--color-light);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 3em;
+                    height: 180%;
+                    border-right: 0.5px solid var(--color-primary-light);
+                    border-left: 0.5px solid var(--color-primary-light);
+                    
+                    
+                    &:hover {
+                        color: var(--color-secondary);
+                        text-decoration: none;
+                    }
+                    
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,95 @@
+#our-projects {
+    padding: 100px 0;
+
+    .container {
+        display: flex; 
+        flex-direction: column;
+
+        hr {
+            opacity: 20%;
+        }
+        
+        @include desktop {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-areas: "content content content tags";
+
+        }
+
+
+        .content-box{
+            grid-area: content;
+            border-right: 2px solid var(--color-gray);
+            padding: 0 20px;
+
+
+
+           .date {
+                font-size: 14px;
+                font-weight: 200;
+
+                i {
+                    margin-right: 5px;
+                    opacity: 50%;
+                }
+           }
+
+           p {
+            font-size: 14px;
+           }
+
+           a {
+            color: var(--color-primary);
+            font-size: 14px;
+            font-weight: 500;
+
+            i {
+                color: var(--color-secondary);
+                margin-left: 10px;
+            }
+           }
+
+
+            .img-box {
+                display: flex;
+                flex-direction: column;
+                gap: 2em;
+                margin: 20px 0;
+                
+                @include tablet {
+                    display: flex;
+                    flex-direction: row;
+                   
+                }
+            }
+
+        }
+
+        .tags-box {
+            grid-area: tags;
+            padding: 0 20px;
+
+
+            a {
+                margin: 5px 5px;
+            }
+            
+            .button-box {
+                display: flex;
+                margin: 10px 0;
+
+                
+
+                .btn-light {
+                    padding: 5px 10px;
+                    border-radius: 25px;
+                    border: 2px solid var(--color-gray);
+                    font-size: 14px;
+                    font-weight: 300;
+                }
+
+            }
+
+        }
+    }
+}

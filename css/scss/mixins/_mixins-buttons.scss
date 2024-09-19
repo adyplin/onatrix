@@ -1,0 +1,68 @@
+@mixin button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+@mixin btn {
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid;
+    padding: 10px 40px;
+    font-size: 16px;
+    transition: 0.20s;
+    text-decoration: none !important;
+    background-color: transparent;
+    @include button;
+
+    &:hover {
+        transition: 0.20s;
+        text-decoration: none;
+    }
+}
+
+@mixin btn-circle {
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid;
+    transition: 0.20s;
+    text-decoration: none !important;
+    outline: none !important;
+    -webkit-tap-hightlight-color: transparent;
+    -webkit-tap-highlight-color: rgb(0,0,0,0);
+    background-color: transparent;
+    
+
+
+    &:hover {
+        transition: 0.20s;
+        text-decoration: none;
+    }
+}
+
+// .btn-primary {
+//     @include btn;
+//     @include button-colors(var(--color-primary), var(--color-secondary), var(--color-accent), var(--color-primary))
+// }
+
+// a {
+//     @include btn;
+//     @include button-colors(var(--color-primary), var(--color-secondary), var(--color-accent), var(--color-primary))
+
+// }
+
+// button {
+//     @include btn;
+//     @include button-colors(var(--color-primary), var(--color-secondary), var(--color-accent), var(--color-primary))
+
+// }
+
+// .btn-form {
+//     @include btn;
+//     padding: 10px 100px;
+//     @include button-colors(var(--color-form), var(--color-primary), var(--color-accent), var(--color-form))
+
+// }

@@ -1,0 +1,67 @@
+#navbar {
+
+    .container {
+            display: flex;
+            flex-direction: column;
+      
+        .content-box {
+            display: flex;
+            justify-content: space-between;
+
+            img {
+                margin: 1em 0;
+            }
+
+            .links {
+                display: none;
+
+                .nav-button {
+                    color: var(--color-primary);
+                    font-weight: 600;
+                    text-decoration: none;
+                }
+                
+                .nav-button.active {
+                    color: var(--color-secondary);
+                    font-weight: 600;
+                }
+            }
+            
+            .search-bar {
+                position: relative;
+                display: flex;
+                justify-content: flex-end;
+                margin: auto 0;
+                border-radius: 25px;
+                height: 1.5em;
+
+                input {
+                    border-radius: 5px;
+                    border-color: var(--color-gray);
+                    font-size: 16px; 
+                    color: #333; 
+                    width: 70%;
+                }
+                
+                i {
+                    position: absolute;
+                    top: 4px;
+                    right: 5px;
+                }
+            }
+            @include tablet {
+                .links {
+                    display: flex;
+                    margin: auto 0;
+                    gap: 1em;
+                }
+            }
+
+            @include desktop {
+                .links {
+                    gap: 2.5em;
+                }
+            }
+        }
+    }
+}
