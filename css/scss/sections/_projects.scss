@@ -78,34 +78,37 @@
                 h6 {
                     color: var(--color-light);
                 }
-            }
-            .text-box-colored {
+
+                i{
+                    display: none;
+                }
+
+                &:hover {
                 background-color: var(--color-primary);
                 position: absolute;
                 bottom: 0px;
                 left:0px;
                 width: 100%;
 
-                i {
-                    color: var(--color-light);
-                    font-size: 50px;
-                    position: absolute;
-                    bottom: 40px;
-                    right: 40px;
-                    font-weight: 500;
-                }
+                    i {
+                        display: block;
+                        color: var(--color-light);
+                        font-size: 50px;
+                        position: absolute;
+                        bottom: 40px;
+                        right: 40px;
+                        font-weight: 500;
+                    }
 
-                .text {
-                    display: flex;
-                    flex-direction: column;
-                    padding: 30px 20px;
+                    .text {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 30px 20px;
+    
+                    }
 
                 }
-                // h6 {
-                //     padding-top: 10px;
-                // }
             }
-
         }
     }
 }

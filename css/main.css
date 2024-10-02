@@ -352,12 +352,12 @@ footer .container {
     font-size: 70px;
   }
 }
-#hero .container .content-box .paragraph {
+#hero .container .content-box .ingress {
   font-size: 14px;
   width: 28em;
 }
 @media (min-width: 1400px) {
-  #hero .container .content-box .paragraph {
+  #hero .container .content-box .ingress {
     font-size: 16px;
     width: 33em;
   }
@@ -366,20 +366,54 @@ footer .container {
 #about-us {
   padding: 80px 0;
 }
-#about-us .container .headline {
-  padding: 30px 0;
+#about-us .container {
+  display: flex;
+  position: relative;
 }
-#about-us .container .headline h5 {
+#about-us .container .content {
+  width: 65%;
+  padding-right: 2%;
+  z-index: 1;
+}
+#about-us .container .form-container {
+  width: 35%;
+  position: absolute;
+  right: 0;
+  top: -120px;
+  background-color: var(--color-light);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#about-us .container .form-container .form-title {
+  width: 100%;
+  background-color: var(--color-primary);
+  padding: 10px;
+}
+#about-us .container .form-container .form-title h4 {
   color: var(--color-secondary);
+  margin: 5px 10px;
 }
-#about-us .container .signature-container {
-  padding: 20px 0;
+#about-us .container .form-container .form-description {
+  padding: 20px;
+  font-size: 13px;
+  font-family: Poppins, sans-serif;
+  font-weight: italic;
+  color: #7d7d7d;
 }
-#about-us .container .signature-container .quote {
-  width: 55%;
+#about-us .container .form-container form {
+  padding: 15px;
 }
-#about-us .container .signature-container .paragraph {
-  width: 70%;
+#about-us .container .form-container form .form-input, #about-us .container .form-container form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--color-gray);
+}
+#about-us .container .form-container .btn-accent {
+  width: calc(100% - 20px);
+  padding: 5px 120px;
+  margin: 10px 10px;
 }
 
 .services {
@@ -660,14 +694,18 @@ footer .container {
 #projects .content .content-box .text-box h6 {
   color: var(--color-light);
 }
-#projects .content .content-box .text-box-colored {
+#projects .content .content-box .text-box i {
+  display: none;
+}
+#projects .content .content-box .text-box:hover {
   background-color: var(--color-primary);
   position: absolute;
   bottom: 0px;
   left: 0px;
   width: 100%;
 }
-#projects .content .content-box .text-box-colored i {
+#projects .content .content-box .text-box:hover i {
+  display: block;
   color: var(--color-light);
   font-size: 50px;
   position: absolute;
@@ -675,7 +713,7 @@ footer .container {
   right: 40px;
   font-weight: 500;
 }
-#projects .content .content-box .text-box-colored .text {
+#projects .content .content-box .text-box:hover .text {
   display: flex;
   flex-direction: column;
   padding: 30px 20px;
@@ -989,7 +1027,7 @@ footer .container {
   #risk-management .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "about text text text";
+    grid-template-areas: "about text text text" "form form form form";
   }
 }
 #risk-management .container .about-us {
@@ -1006,6 +1044,28 @@ footer .container {
   margin: 0px 0 20px 0;
   color: var(--color-primary);
   font-weight: 600;
+}
+#risk-management .container .about-us .form-container {
+  background-color: var(--color-primary);
+  padding: 15px;
+  position: relative;
+}
+#risk-management .container .about-us .form-container h4 {
+  color: var(--color-accent);
+}
+#risk-management .container .about-us .form-container p {
+  color: var(--color-light);
+  font-size: 12px;
+  font-family: Poppins, sans-serif;
+  font-weight: italic;
+}
+#risk-management .container .about-us .form-container i {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+#risk-management .container .about-us .form-container .form-input {
+  width: 100%;
 }
 #risk-management .container .content {
   grid-area: text;
@@ -1039,6 +1099,34 @@ footer .container {
   position: absolute;
   left: 0px;
   top: 10px;
+}
+#risk-management .container .question-form {
+  grid-area: form;
+  padding: 50px 0;
+  width: 100%;
+}
+#risk-management .container .question-form .form-group {
+  display: flex;
+  flex-direction: row;
+  margin: 25px 0;
+  gap: 25px;
+}
+#risk-management .container .question-form .form-group input {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid var(--color-gray);
+}
+#risk-management .container .question-form .form-message {
+  width: 100%;
+  resize: none;
+  height: 200px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid var(--color-gray);
+}
+#risk-management .container .question-form .btn-primary {
+  margin: 25px 0;
+  color: var(--color-accent);
 }
 
 #our-projects {
@@ -1112,6 +1200,29 @@ footer .container {
   border: 2px solid var(--color-gray);
   font-size: 14px;
   font-weight: 300;
+}
+#our-projects .container .tags-box .form-container {
+  background-color: var(--color-primary);
+  margin-top: 35px;
+  padding: 15px;
+  position: relative;
+}
+#our-projects .container .tags-box .form-container h4 {
+  color: var(--color-accent);
+}
+#our-projects .container .tags-box .form-container p {
+  color: var(--color-light);
+  font-size: 12px;
+  font-family: Poppins, sans-serif;
+  font-weight: italic;
+}
+#our-projects .container .tags-box .form-container i {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+#our-projects .container .tags-box .form-container .form-input {
+  width: 100%;
 }
 
 #location {
